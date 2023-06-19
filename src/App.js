@@ -19,7 +19,7 @@ function App() {
       const response = await Storage.list('', { pageSize : 'ALL' });
       const files = response.results.map((file) => ({
         key: file.key,
-        url: `https://s3filestorage2231957-dev.s3.amazonaws.com/public/${file.key}` // Replace 'bucketName' with your actual S3 bucket name
+        url: `https://bucketName.s3.amazonaws.com/public/${file.key}` // Replace 'bucketName' with your actual S3 bucket name
       }));
       setUploadedFiles(files);
     } catch (error) {
